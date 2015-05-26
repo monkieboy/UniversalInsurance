@@ -1,4 +1,4 @@
 build_script:
-	build.bat Appveyor
+   build.bat Appveyor
 	
-test: off  
+test: off
