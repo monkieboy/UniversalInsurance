@@ -1,8 +1,8 @@
 ﻿namespace UniversalInsurance.RatingEngine
 {
-    public enum Manufacturer
+    public class Manufacturer
     {
-        Audi,
-        Mercedes
+        public string Name { get; set; }
+        public decimal Factor { get; set; }
     }
 }

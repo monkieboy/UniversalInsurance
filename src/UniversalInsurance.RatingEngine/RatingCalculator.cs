@@ -10,21 +10,13 @@
         private static decimal CalculatePremium(Vehicle vehicle)
         {
             var premium = ApplyRatings(vehicle);
-            
+
             return premium;
         }
 
         private static decimal ApplyRatings(Vehicle vehicle)
         {
-            switch (vehicle.Manufacturer)
-            {
-                case Manufacturer.Audi:
-                    return vehicle.Factor * BasePremium(vehicle.Class);
-                case Manufacturer.Mercedes:
-                    return vehicle.Factor * BasePremium(vehicle.Class);
-                default:
-                    return 0;
-            }
+            return vehicle.Manufacturer.Factor * BasePremium(vehicle.Class);
         }
 
         private static decimal BasePremium(VehicleClass vehicleClass)

@@ -6,6 +6,24 @@ namespace UniversalInsurance.RatingEngine.Tests
 {
     public class When_calculating_a_premium_and_applying_factors
     {
+        private static readonly Manufacturer Audi = new Manufacturer
+        {
+            Name = "Audi",
+            Factor = 1.5m,
+        };
+
+        private static readonly Manufacturer Mercedes = new Manufacturer
+        {
+            Name = "Mercedes",
+            Factor = 2.0m,
+        };
+
+        [SetUp]
+        public void SetUpTests()
+        {
+            
+        }
+
         [TestCaseSource("Vehicles")]
         public void Should_calculate_the_correct_premium_for_the_vehicle_type_and_manufacturer(Vehicle vehicle, decimal expectedPremium)
         {
@@ -30,9 +48,8 @@ namespace UniversalInsurance.RatingEngine.Tests
             {
                 var vehicle = new Vehicle
                 {
-                    Manufacturer = Manufacturer.Audi,
-                    Class = VehicleClass.Car,
-                    Factor = 1.5m
+                    Manufacturer = Audi,
+                    Class = VehicleClass.Car
                 };
                 return vehicle;
             }
@@ -43,9 +60,8 @@ namespace UniversalInsurance.RatingEngine.Tests
             {
                 var vehicle = new Vehicle
                 {
-                    Manufacturer = Manufacturer.Audi,
-                    Class = VehicleClass.Van,
-                    Factor = 1.5m
+                    Manufacturer = Audi,
+                    Class = VehicleClass.Van
                 };
                 return vehicle;
             }
@@ -56,9 +72,8 @@ namespace UniversalInsurance.RatingEngine.Tests
             {
                 var vehicle = new Vehicle
                 {
-                    Manufacturer = Manufacturer.Mercedes,
-                    Class = VehicleClass.Van,
-                    Factor = 2.0m
+                    Manufacturer = Mercedes,
+                    Class = VehicleClass.Van
                 };
                 return vehicle;
             }
@@ -69,9 +84,8 @@ namespace UniversalInsurance.RatingEngine.Tests
             {
                 var vehicle = new Vehicle
                 {
-                    Manufacturer = Manufacturer.Mercedes,
-                    Class = VehicleClass.Car,
-                    Factor = 2.0m
+                    Manufacturer = Mercedes,
+                    Class = VehicleClass.Car
                 };
                 return vehicle;
             }
