@@ -31,7 +31,8 @@ namespace UniversalInsurance.RatingEngine.Tests
                 var vehicle = new Vehicle
                 {
                     Manufacturer = Manufacturer.Audi,
-                    Class = VehicleClass.Car
+                    Class = VehicleClass.Car,
+                    Factor = 1.5m
                 };
                 return vehicle;
             }
@@ -43,7 +44,8 @@ namespace UniversalInsurance.RatingEngine.Tests
                 var vehicle = new Vehicle
                 {
                     Manufacturer = Manufacturer.Audi,
-                    Class = VehicleClass.Van
+                    Class = VehicleClass.Van,
+                    Factor = 1.5m
                 };
                 return vehicle;
             }
@@ -55,7 +57,8 @@ namespace UniversalInsurance.RatingEngine.Tests
                 var vehicle = new Vehicle
                 {
                     Manufacturer = Manufacturer.Mercedes,
-                    Class = VehicleClass.Van
+                    Class = VehicleClass.Van,
+                    Factor = 2.0m
                 };
                 return vehicle;
             }
@@ -67,7 +70,8 @@ namespace UniversalInsurance.RatingEngine.Tests
                 var vehicle = new Vehicle
                 {
                     Manufacturer = Manufacturer.Mercedes,
-                    Class = VehicleClass.Car
+                    Class = VehicleClass.Car,
+                    Factor = 2.0m
                 };
                 return vehicle;
             }

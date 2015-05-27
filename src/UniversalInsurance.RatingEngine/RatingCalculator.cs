@@ -9,32 +9,22 @@
 
         private static decimal CalculatePremium(Vehicle vehicle)
         {
-            var premium = ApplyRatings(vehicle.Manufacturer, vehicle.Class);
+            var premium = ApplyRatings(vehicle);
             
             return premium;
         }
 
-        private static decimal ApplyRatings(Manufacturer manufacturer, VehicleClass vehicleClass)
+        private static decimal ApplyRatings(Vehicle vehicle)
         {
-            switch (manufacturer)
+            switch (vehicle.Manufacturer)
             {
                 case Manufacturer.Audi:
-                    return AudiFactor * BasePremium(vehicleClass);
+                    return vehicle.Factor * BasePremium(vehicle.Class);
                 case Manufacturer.Mercedes:
-                    return MercedesFactor * BasePremium(vehicleClass);
+                    return vehicle.Factor * BasePremium(vehicle.Class);
                 default:
                     return 0;
             }
-        }
-
-        private static decimal MercedesFactor
-        {
-            get { return 2.0m; }
-        }
-
-        private static decimal AudiFactor
-        {
-            get { return 1.5m; }
         }
 
         private static decimal BasePremium(VehicleClass vehicleClass)
