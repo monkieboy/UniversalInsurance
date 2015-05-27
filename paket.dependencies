@@ -1,3 +1,5 @@
 source https://nuget.org/api/v2
 
 nuget FAKE
+nuget NUNit
+nuget NUNit.Runners
