@@ -19,6 +19,7 @@ namespace UniversalInsurance.RatingEngine.Tests
         private static IEnumerable<TestCaseData> Vehicles()
         {
             yield return new TestCaseData(AudiCar, 1200m);
+            yield return new TestCaseData(AudiVan, 1500m);
             yield return new TestCaseData(MercedesVan, 2000m);
             yield return new TestCaseData(MercedesCar, 1600m);
         }
@@ -31,6 +32,18 @@ namespace UniversalInsurance.RatingEngine.Tests
                 {
                     Manufacturer = Manufacturer.Audi,
                     Class = VehicleClass.Car
+                };
+                return vehicle;
+            }
+        }
+        private static Vehicle AudiVan
+        {
+            get
+            {
+                var vehicle = new Vehicle
+                {
+                    Manufacturer = Manufacturer.Audi,
+                    Class = VehicleClass.Van
                 };
                 return vehicle;
             }
