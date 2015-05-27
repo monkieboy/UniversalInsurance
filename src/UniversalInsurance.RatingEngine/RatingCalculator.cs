@@ -1,6 +1,6 @@
 ﻿namespace UniversalInsurance.RatingEngine
 {
-    public class RatingCalculator
+    public class RatingCalculator : IRatingCalculator
     {
         public decimal CalculatePremium(Vehicle vehicle)
         {
