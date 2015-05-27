@@ -2,9 +2,8 @@
 {
     public class Van : VehicleType
     {
-        public Van(decimal basePremium)
+        public Van(decimal basePremium) : base(basePremium)
         {
-            BasePremium = basePremium;
         }
     }
 }

@@ -2,9 +2,8 @@
 {
     public class Car : VehicleType
     {
-        public Car(decimal basePremium)
+        public Car(decimal basePremium) : base(basePremium)
         {
-            BasePremium = basePremium;
         }
     }
 }

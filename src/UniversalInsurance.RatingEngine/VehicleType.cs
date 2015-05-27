@@ -2,6 +2,10 @@
 {
     public abstract class VehicleType
     {
-        public decimal BasePremium { get; protected set; }
+        protected VehicleType(decimal basePremium)
+        {
+            BasePremium = basePremium;
+        }
+        public decimal BasePremium { get; private set; }
     }
 }
