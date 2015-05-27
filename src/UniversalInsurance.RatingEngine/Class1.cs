@@ -4,7 +4,7 @@
     {
         public decimal GetRating(Vehicle vehicle)
         {
-            throw new System.NotImplementedException();
+            return 800m;
         }
     }
 }
