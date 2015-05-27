@@ -2,6 +2,7 @@
 {
     public enum VehicleClass
     {
-        Car
+        Car,
+        Van
     }
 }

@@ -4,7 +4,10 @@
     {
         public decimal GetRating(Vehicle vehicle)
         {
-            return 800m;
+            var carRating = 800m;
+            var vanRating = 2000m;
+
+            return vehicle.Class == VehicleClass.Car ? carRating : vanRating;
         }
     }
 }
