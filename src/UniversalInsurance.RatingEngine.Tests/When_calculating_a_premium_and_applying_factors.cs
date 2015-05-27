@@ -11,7 +11,7 @@ namespace UniversalInsurance.RatingEngine.Tests
         {
             var calc = new RatingCalculator();
 
-            var premium = calc.GetRating(vehicle);
+            var premium = calc.GetPremium(vehicle);
 
             premium.Should().Be(expectedPremium);
         }
