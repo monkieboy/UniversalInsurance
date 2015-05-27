@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UniversalInsurance.RatingEngine
+﻿namespace UniversalInsurance.RatingEngine
 {
-    public class Class1
+    public class RatingCalculator
     {
+        public decimal GetRating(Vehicle vehicle)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
