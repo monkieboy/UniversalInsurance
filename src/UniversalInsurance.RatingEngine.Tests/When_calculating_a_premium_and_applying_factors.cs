@@ -1,28 +1,25 @@
-﻿using FluentAssertions;
+﻿using System.Collections.Generic;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace UniversalInsurance.RatingEngine.Tests
 {
     public class When_calculating_a_premium_and_applying_factors
     {
-        [Test]
-        public void Should_calculate_the_correct_value_of_800_for_a_Audi_car()
+        [TestCaseSource("Vehicles")]
+        public void Should_calculate_the_correct_premium_for_the_vehicle_type_and_manufacturer(Vehicle vehicle, decimal expectedPremium)
         {
             var calc = new RatingCalculator();
 
-            var premium = calc.GetRating(AudiCar);
+            var premium = calc.GetRating(vehicle);
 
-            premium.Should().Be(800m);
+            premium.Should().Be(expectedPremium);
         }
 
-        [Test]
-        public void Should_calculate_the_correct_value_of_2000_for_a_Mercedes_van()
+        private static IEnumerable<TestCaseData> Vehicles()
         {
-            var calc = new RatingCalculator();
-
-            var premium = calc.GetRating(MercedesVan);
-
-            premium.Should().Be(2000m);
+            yield return new TestCaseData(AudiCar, 800m);
+            yield return new TestCaseData(MercedesVan, 2000m);
         }
 
         private static Vehicle AudiCar
