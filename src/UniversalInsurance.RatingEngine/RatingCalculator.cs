@@ -4,9 +4,8 @@
     {
         public decimal GetRating(Vehicle vehicle)
         {
-            var carRating = 800m;
-            var vanRating = 2000m;
-
+            var carRating = vehicle.Manufacturer == Manufacturer.Audi ? 1.5m * 800m : 2.0m * 800m;
+            var vanRating = vehicle.Manufacturer == Manufacturer.Audi ? 1.5m * 1000m : 2.0m * 1000m;
             return vehicle.Class == VehicleClass.Car ? carRating : vanRating;
         }
     }
