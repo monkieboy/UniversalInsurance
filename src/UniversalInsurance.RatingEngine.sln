@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalInsurance.RatingEngine\UniversalInsurance.RatingEngine", "UniversalInsurance.RatingEngine\UniversalInsurance.RatingEngine.csproj", "{F7AFD4E5-CDF3-4756-BE28-B94A908B5A57}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalInsurance.RatingEngine", "UniversalInsurance.RatingEngine\UniversalInsurance.RatingEngine.csproj", "{F7AFD4E5-CDF3-4756-BE28-B94A908B5A57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{DB34931D-A8F1-4A74-B95A-27BF45D63016}"
+	ProjectSection(SolutionItems) = preProject
+		..\build.bat = ..\build.bat
+		..\Build.fsx = ..\Build.fsx
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalInsurance.RatingEngine.Tests", "UniversalInsurance.RatingEngine.Tests\UniversalInsurance.RatingEngine.Tests.csproj", "{BF782BA5-9E73-4FC8-B63B-65DE5A239E22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,10 @@ Global
 		{F7AFD4E5-CDF3-4756-BE28-B94A908B5A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7AFD4E5-CDF3-4756-BE28-B94A908B5A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7AFD4E5-CDF3-4756-BE28-B94A908B5A57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF782BA5-9E73-4FC8-B63B-65DE5A239E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF782BA5-9E73-4FC8-B63B-65DE5A239E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF782BA5-9E73-4FC8-B63B-65DE5A239E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF782BA5-9E73-4FC8-B63B-65DE5A239E22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
