@@ -3,7 +3,7 @@ namespace UniversalInsurance.RatingEngine
     public class Vehicle
     {
         public Manufacturer Manufacturer { get; set; }
-        public VehicleClass Class { get; set; }
-        public decimal Factor { get; set; }
+        public IVehicleType Type { get; set; }
+        public decimal BasePremium { get; set; }
     }
 }
