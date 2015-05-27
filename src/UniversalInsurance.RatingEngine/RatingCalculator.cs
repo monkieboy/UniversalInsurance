@@ -2,12 +2,7 @@
 {
     public class RatingCalculator
     {
-        public decimal GetPremium(Vehicle vehicle)
-        {
-            return CalculatePremium(vehicle);
-        }
-
-        private static decimal CalculatePremium(Vehicle vehicle)
+        public decimal CalculatePremium(Vehicle vehicle)
         {
             return vehicle.Manufacturer.Factor * vehicle.Type.BasePremium;
         }
