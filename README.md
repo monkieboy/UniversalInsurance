@@ -1,3 +1,9 @@
+## Build Status
+
+| Platform | Status         |
+| -------- | -------------- |
+| Windows  | [![Build status](https://ci.appveyor.com/api/projects/status/mluhhotmhutb9sxi/branch/master?svg=true)](https://ci.appveyor.com/project/monkieboy/universalinsurance/settings) |
+
 # UniversalInsurance
 A simple rating engine for a quote business.
 
